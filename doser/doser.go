@@ -57,7 +57,7 @@ func main() {
     interval := parseInt(args[2])
     t_0 := parseInt(args[3])
 
-    fmt.Println("hours_ago concentration_mg")
+    fmt.Println("hours_from_initial_dose concentration_mg")
     for t := 0; t < t_0; t += 1{
         fmt.Printf("%d %f\n", t, concentration(dose, interval, t, k_e))
     }
