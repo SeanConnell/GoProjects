@@ -20,13 +20,12 @@ http://www.gnuplot.info/download.html
 
 Both of these are available from source as well as in many package repositories. It should be easy to get them installed on almost any platform. Even windows.
 
+The examples below treat this file as a script with ```go run```. You can obviously build it properly and keep it around forever; your own private binary.
+
 ### Usage
 
 #### Generating concentration data
-Invoke the program on the command line with arguments of the form: 
-```sh
-doser [dose amount in mg] [dose frequency in hr] [t0 for initial dose in hours ago]
-```
+Invoke the program on the command line with arguments of the form: ```sh go run doser.go [dose amount in mg] [dose frequency in hr] [t0 for initial dose in hours ago] ```
 
 It will produce something along the lines of
 ```
@@ -47,7 +46,7 @@ This is a representation of the time from first dose in hours (in the first colu
 Save the output of a data run however you'd like. The simplest is with output redirection:
 
 ```sh
-doser 200 12 120 > data_file.txt
+go run doser.go 200 12 120 > data_file.txt
 ```
 
 Plot the data file with some basic settings in GNUPlot 
